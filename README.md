@@ -1,6 +1,6 @@
-#Apuntes DDL y DML
+# Apuntes DDL y DML
 
-##Índice
+## Índice
 
 - [DDL](#DDL)
 
@@ -26,7 +26,7 @@
 
 - [EXTRA](#EXTRA)
 
--[Ejercicio de ejemplo](#ejercicio-de-ejemplo)
+- [Ejercicio de ejemplo](#ejercicio-de-ejemplo)
 
 
 
@@ -34,10 +34,10 @@
 
 
 
-#DDL
+# DDL
 
 
-##Comandos principales DDL
+## Comandos principales DDL
 
 
 - CREATE
@@ -50,7 +50,7 @@
 > -------
 
 
-##CREATE
+## CREATE
 
 Sirve para crear algo, como una base de datos:
 
@@ -104,10 +104,10 @@ Mientras que una constraint para una clave ajena sería:
 
 > ON DELETE y ON UPDATE es por defecto NO ACTION si no se introduce nada.
 
-> MATCH FULL respeta los NULL y NO
+> MATCH FULL respeta los NULL y NO ACTION
 
 
-Unique permite crear claves secundarias, es decir, claves candidatas a clave primarias. (Lo cual significa que no se pueden repetir.)
+UNIQUE permite crear claves secundarias, es decir, claves candidatas a clave primarias. (Lo cual significa que no se pueden repetir.)
 
 ```
 [<CONSTRAINT <nombe-de-restricción>]
@@ -126,7 +126,7 @@ UNIQUE DNI,
 > -------
 
 
-###CHECK
+### CHECK
 
 >No cae en el examen, pero la añado igualmente.
 
@@ -163,7 +163,7 @@ INITIALLY DEFERRED,
 > -------
 
 
-##DROP
+## DROP
 
 Sirve para **borrar**. Ya sea una tabla, base de datos o una constraint. (De lo cual hay ejemplos en el ALTER).
 
@@ -179,11 +179,11 @@ DROP SCHEMA
 [CASCADE|RESTRICT]
 ```
 
-> CASCADE:
+> CASCADE
 
 Borra aunque esté llena.
 
-> RESTRICT: 
+> RESTRICT
 
 No permite borrar si está llena.
 
@@ -191,7 +191,7 @@ No permite borrar si está llena.
 > -------
 
 
-##ALTER
+## ALTER
 
 ALTER sirve para editar tablas ya creadas.
 
@@ -201,7 +201,7 @@ ALTER TABLE <nombre-de-la-tabla>
 ADD [COLUMN] <atributo1> <dominio1> [NOT NULL] [DEFAULT <x>]
 ```
 
-O también:
+Añade columna
 
 ```
 ALTER TABLE <nombre-de-la-tabla>
@@ -209,7 +209,7 @@ ALTER TABLE <nombre-de-la-tabla>
 DROP [COLUMN] <atributo1> [CASCADE|RESTRICT]
 ```
 
-O también:
+Borra columna
 
 ```
 ALTER TABLE <nombre-de-la-tabla>
@@ -217,7 +217,7 @@ ALTER TABLE <nombre-de-la-tabla>
 ADD <restricción>
 ```
 
-O también:
+Añade restricción
 
 ```
 ALTER TABLE <nombre-de-la-tabla>
@@ -225,7 +225,10 @@ ALTER TABLE <nombre-de-la-tabla>
 DROP <restricción>
 ```
 
-###Usar ALTER para modificar una constraint incorrecta
+Borra restricción
+
+
+### Usar ALTER para modificar una constraint incorrecta
 
 Para cambiar una constraint ya creada lo mejor es no modificarla, si no primero hacer un DROP a la constraint:
 
@@ -249,9 +252,9 @@ ALTER TABLE Profesor
 > ----------------------------------------
 
 
-#DML
+# DML
 
-##Comandos principales DDL
+## Comandos principales DDL
 
 
 - INSERT
@@ -264,7 +267,7 @@ ALTER TABLE Profesor
 > -------
 
 
-##INSERT
+## INSERT
 
 ```
 INSERT INTO <nome-da-táboa>
@@ -322,7 +325,7 @@ gpd sobra y como no hay cuatro en la tabla a la que estas copiando, falla.
 > -------
 
 
-##UPDATE
+## UPDATE
 
 ```
 UPDATE <nome-da-taboa>
@@ -364,7 +367,7 @@ OR name='Portugal';
 > -------
 
 
-##DELETE
+## DELETE
 
 ```
 DELETE FROM <nombre-da-taboa>
@@ -384,7 +387,7 @@ Esto borra todos los países que tengan como continente Europe
 > ----------------------------------------
 
 
-##EXTRA
+## EXTRA
 
 En un esquema de base de datos, las líneas siguen este diseño:
 
@@ -511,13 +514,13 @@ ALTER TABLE Departamento
 > ----------------------------------------
 
 
-##Ejercicio de ejemplo
+## Ejercicio de ejemplo
 
 
 Ejercicio: 
 ![404](https://github.com/davidgchaves/first-steps-with-git-and-github-wirtz-asir1-and-dam1/blob/master/exercicios-ddl/1-proxectos-de-investigacion/img/1-proxectos-de-investigacion-relacional.jpeg)
 
-> En el esquema la relación Proxecto a Grupo está mal en ña imagen del esquema, no es Cascada, es borrado a NULL por que es opcional.
+> En el esquema la relación Proxecto a Grupo está mal en la imagen del esquema, no es Cascada, es borrado a NULL por que es opcional.
 
 
 ```
