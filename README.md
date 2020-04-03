@@ -717,9 +717,11 @@ Cuando se haya instalado, usamos sudo mysql para iniciar el monitor de MariaDB.
 
 Escribir \h (o también \?) nos abre una lista con los comandos que se pueden usar.
 
-![FOTO 5](./img/Foto5.png)
+![FOTO 5](./img/Foto5.PNG)
 
 Y una vez comprobado que funciona, escribimos exit para salir y MariaDB se despide.
+
+![FOTO 6](./img/Foto6.PNG)
 
 
 
