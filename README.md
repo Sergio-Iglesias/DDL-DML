@@ -28,6 +28,10 @@
 
 - [Ejercicio de ejemplo](#ejercicio-de-ejemplo)
 
+- [MariaDB](#MariaDB)
+
+    - [Instalación de MariaDB](#instalación-de-mariaDB)
+
 
 
 > ----------------------------------------
@@ -666,3 +670,57 @@ ALTER TABLE Grupo
   CHECK (Data_Inicio < Data_Cese),
 );
 ```
+
+
+
+> ----------------------------------------
+
+
+
+#MariaDB
+
+
+##Instalación de MariaDB
+
+
+Empezamos abriendo una terminal.
+
+![FOTO1](./img/Foto1)
+
+Vamos a la página de MariaDB y seleccionamos nuestra versión de Ubuntu. Lo cual nos enseña los pasos que debemos de seguir.
+
+![FOTO1A](./img/Foto1A)
+
+Escribimos el primer paso que nos pone en la página: `sudo apt-get install software-properties-common`
+
+![FOTO1B](./img/Foto1B)
+
+Escribimos el siquiente paso: `sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'`
+
+![FOTO1C](./img/Foto1C)
+
+Y escribimos el último paso de esta parte: `sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://mariadb.mirror.triple-it.nl/repo/10.4/ubuntu bionic main'`
+
+![FOTO1D](./img/Foto1D)
+
+Después escribimos sudo apt-get update y dejamos que se actualize.
+
+![FOTO2](./img/Foto2)
+
+Una vez actualizado escribimos sudo apt install mariadb-server (Le damos a Y en si queremos continuar.)
+
+![FOTO3](./img/Foto3)
+
+Cuando se haya instalado, usamos sudo mysql para iniciar el monitor de MariaDB.
+
+![FOTO 4](./img/Foto4)
+
+Escribir \h (o también \?) nos abre una lista con los comandos que se pueden usar.
+
+![FOTO 5](./img/Foto5)
+
+Y una vez comprobado que funciona, escribimos exit para salir y MariaDB se despide.
+
+
+
+> ----------------------------------------
