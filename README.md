@@ -32,9 +32,9 @@
 
     - [Instalación de MariaDB](#instalación-de-mariaDB)
 
-    - [Creación de base de datos (Ejemplo 1)](#Creación-de-base-de-datos-(Ejemplo-1))
+    - [Creación de base de datos (Ejemplo 1)](#Creación-de-base-de-datos-Ejemplo-1)
 
-    - [Creación de base de datos (Ejemplo 2)](#Creación-de-base-de-datos-(Ejemplo-2))
+    - [Creación de base de datos (Ejemplo 2)](#Creación-de-base-de-datos-Ejemplo-2)
 
     - [Meta uso MariaDB](#Meta-uso-MariaDB)
 
@@ -745,7 +745,7 @@ Y una vez comprobado que funciona, escribimos exit para salir y MariaDB se despi
 
 
 
-## Creación de base de datos (Ejemplo 1)
+## Creación de base de datos Ejemplo 1
 
 Abrimos MariaDB y empezamos creando la base de datos sobre la que vamos a trabajar.
 
@@ -1053,7 +1053,7 @@ CHECK (Data_Inicio < Data_Cese)
 
 > ----------------------------------------
 
-## Creación de base de datos (Ejemplo 2)
+## Creación de base de datos Ejemplo 2
 
 
 Abrimos MariaDB y otra vez, creamos la base de datos con la que vamos a trabajar.
