@@ -32,9 +32,9 @@
 
     - [Instalación de MariaDB](#instalación-de-mariaDB)
 
-    - [Creación de base de datos (Ejemplo 1)](#Creación-de-base-de-datos-Ejemplo-1)
+    - [Creación de base de datos Ejemplo 1](#Creación-de-base-de-datos-Ejemplo-1)
 
-    - [Creación de base de datos (Ejemplo 2)](#Creación-de-base-de-datos-Ejemplo-2)
+    - [Creación de base de datos Ejemplo 2](#Creación-de-base-de-datos-Ejemplo-2)
 
     - [Meta uso MariaDB](#Meta-uso-MariaDB)
 
@@ -759,8 +759,7 @@ Usamos el comando USE para seleccionar la base de datos que acabamos de crear y 
 USE Investigacion
 ```
 
-    CAPTURA1
-
+![Foto 1](./img/ejemplo1/Captura1.PNG)
 Una vez que tenemos la base de datos seleccionada, podemos empezar a crear las tablas.
 
 La síntaxis de CREATE TABLE es la siguiente:
@@ -780,7 +779,7 @@ PRIMARY KEY (Nome_Sede)
 );
 ```
 
-    CAPTURA2
+![Foto 2](./img/ejemplo1/Captura2.PNG)
 
 Seguimos con Departamento.
 
@@ -793,7 +792,8 @@ PRIMARY KEY (Nome_Departamento)
 );
 ```
 
-    CAPTURA3
+![Foto 3](./img/ejemplo1/Captura3.PNG)
+
 
 
 Seguimos con Ubicacion.
@@ -806,7 +806,8 @@ PRIMARY KEY (Nome_Sede, Nome_Departamento)
 );
 ```
 
-    CAPTURA4
+![Foto 4](./img/ejemplo1/Captura4.PNG)
+
 
 Seguimos con Grupo.
 
@@ -820,7 +821,8 @@ PRIMARY KEY (Nome_Grupo, Nome_Departamento)
 );
 ```
 
-    CAPTURA5
+![Foto 5](./img/ejemplo1/Captura5.PNG)
+
 
 Seguimos con Profesor.
 
@@ -836,7 +838,8 @@ PRIMARY KEY (DNI)
 );
 ```
 
-    CAPTURA6
+![Foto 6](./img/ejemplo1/Captura6.PNG)
+
 
 Seguimos con Proxecto.
 
@@ -854,7 +857,8 @@ PRIMARY KEY (Codigo_Proxecto)
 );
 ```
 
-    CAPTURA7
+![Foto 7](./img/ejemplo1/Captura7.PNG)
+
 
 Seguimos con Participa
 
@@ -869,7 +873,8 @@ PRIMARY KEY (DNI, Codigo_Proxecto)
 );
 ```
 
-    CAPTURA8
+![Foto 8](./img/ejemplo1/Captura8.PNG)
+
 
 Seguimos con Programa.
 
@@ -880,7 +885,7 @@ PRIMARY KEY (Nome_Programa)
 ); 
 ```
 
-    Captura 9
+![Foto 9](./img/ejemplo1/Captura9.PNG)
 
 Y terminamos con Financia.
 
@@ -894,7 +899,7 @@ CREATE TABLE Financia (
 );
 ```
 
-    Captura 10
+![Foto 10](./img/ejemplo1/Captura10.PNG)
 
 Una vez que hemos terminado creando las tablas, tenemos que crear las claves ajenas alterando las tablas ya creadas.
 
@@ -923,7 +928,7 @@ ON UPDATE CASCADE
 ;
 ```
 
-    CAPTURA A
+![Foto A](./img/ejemplo1/CapturaA.PNG)
 
 Seguimos con la tabla Grupo.
 
@@ -937,7 +942,7 @@ ON UPDATE CASCADE
 ;
 ```
 
-    CapturaB
+![Foto B](./img/ejemplo1/CapturaB.PNG)
 
 Seguimos con la tabla Profesor.
 
@@ -951,7 +956,7 @@ ON UPDATE CASCADE
 ;
 ```
 
-    CapturaC
+![Foto C](./img/ejemplo1/CapturaC.PNG)
 
 Seguimos con la tabla Proxecto
 
@@ -965,7 +970,7 @@ ON UPDATE CASCADE
 );
 ```
 
-    Captura D
+![Foto D](./img/ejemplo1/CapturaD.PNG)
 
 Serguimos con la tabla Departamento.
 
@@ -979,7 +984,7 @@ ON UPDATE CASCADE
 ;
 ```
 
-    Captura E
+![Foto E](./img/ejemplo1/CapturaE.PNG)
 
 Seguimos con la tabla Grupo.
 
@@ -993,7 +998,7 @@ ON UPDATE CASCADE
 ;
 ```
 
-    Captura F
+![Foto F](./img/ejemplo1/CapturaF.PNG)
 
 Seguimos con la tabla Participa.
 
@@ -1012,7 +1017,7 @@ ON UPDATE CASCADE
 ;
 ```
 
-    Captura G
+![Foto G](./img/ejemplo1/CapturaG.PNG)
 
 Terminamos con la tabla Financia.
 
@@ -1030,7 +1035,7 @@ ON DELETE CASCADE
 ON UPDATE CASCADE;
 ```
 
-    Captura H
+![Foto H](./img/ejemplo1/CapturaH.PNG)
 
 Y añadimos un par de CHECKS al final, usando ALTER.
 
@@ -1040,7 +1045,7 @@ ADD CONSTRAINT Check_Dates
 CHECK (Data_Inicio < Data_Fin),
 ```
 
-    Check 1
+![Check1](./img/ejemplo1/Check1.PNG)
 
 ```
 ALTER TABLE Participa
@@ -1048,7 +1053,7 @@ ADD CONSTRAINT Check_Fecha
 CHECK (Data_Inicio < Data_Cese)
 ```
 
-    Check 2
+![Check2](./img/ejemplo1/Check2.PNG)
 
 
 > ----------------------------------------
@@ -1068,7 +1073,7 @@ Y otra vez, usamos el comando USE para seleccionar esa base de datos.
 USE Naves
 ```
 
-    CAPTURA1
+![Foto 1](./img/ejemplo2/Captura1.PNG)
 
 Y, como en el ejemplo 1, empezamos a crear las tablas. Creamos Servizo.
 
@@ -1080,7 +1085,7 @@ PRIMARY KEY (Clave_Servizo, Nome_Servizo)
 );
 ```
 
-    Captura 2
+![Foto 2](./img/ejemplo2/Captura2.PNG)
 
 Serguimos con Dependencia.
 
@@ -1097,7 +1102,7 @@ CREATE TABLE Dependencia (
 );
 ```
 
-    Captura 3
+![Foto 3](./img/ejemplo2/Captura3.PNG)
 
 Seguimos con Camara.
 
@@ -1110,7 +1115,7 @@ CREATE TABLE Camara (
 );
 ```
 
-    Captura 4
+![Foto 4](./img/ejemplo2/Captura4.PNG)
 
 Serguimos con Tripulacion.
 
@@ -1128,7 +1133,7 @@ PRIMARY KEY (Codigo_Tripulacion)
 );
 ```
 
-    Captura 5
+![Foto 5](./img/ejemplo2/Captura5.PNG)
 
 Seguimos con Planeta.
 
@@ -1143,7 +1148,7 @@ PRIMARY KEY (Codigo_Planeta)
  );
 ```
 
-    Captura 6
+![Foto 6](./img/ejemplo2/Captura6.PNG)
 
 Seguimos con Visita.
 
@@ -1157,7 +1162,7 @@ CREATE TABLE Visita (
 );
 ```
 
-    Captura7
+![Foto 7](./img/ejemplo2/Captura7.PNG)
 
 Seguimos con Habita.
 
@@ -1170,7 +1175,7 @@ CREATE TABLE Habita (
 );
 ```
 
-    Captura 8
+![Foto 8](./img/ejemplo2/Captura8.PNG)
 
 Y terminamos con Raza.
 
@@ -1185,7 +1190,7 @@ PRIMARY KEY (Nome_Raza)
 );
 ```
 
-    Captura 9
+![Foto 9](./img/ejemplo2/Captura9.PNG)
 
 Una vez que hemos creado las tablas tenemos que hacer como el primer ejemplo, empezar a usar ALTER para modificar las tablas y añadir las claves ajenas.
 
@@ -1201,7 +1206,7 @@ ON UPDATE CASCADE
 ;
 ```
 
-    Captura A
+![Foto A](./img/ejemplo2/CapturaA.PNG)
 
 Seguimos con la tabla Camara.
 
@@ -1215,7 +1220,7 @@ ADD CONSTRAINT FK_Dependencia_Camara
 ;
 ```
 
-    Captura B
+![Foto B](./img/ejemplo2/CapturaB.PNG)
 
 Seguimos con la tabla Tripulacion.
 
@@ -1229,7 +1234,7 @@ ADD CONSTRAINT FK_Camara_Tripulacion
 ;
 ```
 
-    Captura C
+![Foto C](./img/ejemplo2/CapturaC.PNG)
 
 Seguimos con la tabla Tripulacion.
 
@@ -1243,7 +1248,7 @@ ON DELETE CASCADE
 ;
 ```
 
-    Captura D
+![Foto D](./img/ejemplo2/CapturaD.PNG)
 
 Seguimos con la tabla Visita.
 
@@ -1262,7 +1267,7 @@ ADD CONSTRAINT FK_Planeta_Visita
 );
 ```
 
-    Captura E
+![Foto E](./img/ejemplo2/CapturaE.PNG)
 
 Seguimos con la tabla Habita.
 
@@ -1276,7 +1281,7 @@ ADD CONSTRAINT FK_Planeta_Habita
 ;
 ```
 
-    Captura F
+![Foto F](./img/ejemplo2/CapturaF.PNG)
 
 Y terminamos otra vez con la tabla Habita.
 
@@ -1290,8 +1295,6 @@ ALTER TABLE Habita
 ;
 ```
 
-    Captura G
-
 Finalmente, añadimos un CHECK con ALTER.
 
 ```
@@ -1300,7 +1303,7 @@ ADD CONSTRAINT Capacidade_maior_de_cero
 CHECK (capacidade > 0);
 ```
 
-    Check 1
+![Check1](./img/ejemplo2/Check1.PNG)
 
 
 > ----------------------------------------
@@ -1317,7 +1320,7 @@ SHOW {DATABASES | SCHEMAS}
 
 El comando más básico para esto es el comando SHOW DATABASES. El cual nos permite ver las bases de datos que tenemos creadas.
 
-    Captura0
+![Foto 0](./img/metauso/Captura0.PNG)
 
 ### SHOW TABLES
 
@@ -1328,7 +1331,7 @@ SHOW [FULL] TABLES [FROM db_name]
 
 Una vez que accedamos a una base de datos, podemos usar SHOW para que nos enseñe las tablas de la base de datos, usando SHOW TABLES FROM.
 
-    Captura1
+![Foto 1](./img/metauso/Captura1.PNG)
 
 ### SHOW COLUMNS
 
@@ -1339,7 +1342,7 @@ SHOW [FULL] {COLUMNS | FIELDS} FROM tbl_name [FROM db_name]
 
 Y el mismo comando SHOW nos permite ver las columnas de una tabla, con la informacion extra que nos proporciona.
 
-    Captura2
+![Foto 2](./img/metauso/Captura2.PNG)
 
 ### SHOW CREATE TABLE
 
@@ -1349,7 +1352,7 @@ SHOW CREATE TABLE tbl_name
 
 Usando SHOW CREATE TABLE también nos permite ver como se ha creado la tabla. (También existe SHOW CREATE DATABASE)
 
-    Captura3
+![Foto 3](./img/metauso/Captura3.PNG)
 
 ### WHERE y LIKE
 
@@ -1359,19 +1362,19 @@ Por ejemplo, si usamos LIKE 'A%' sacamos solo las columnas que empiezan por A. E
 
 Usando LIKE con columnas:
 
-    Captura4
+![Foto 4](./img/metauso/Captura4.PNG)
 
 Usando WHERE y LIKE para sacar cada columna que sea de un tipo concreto:
 
-    Captura5
+![Foto 5](./img/metauso/Captura5.PNG)
 
 Usando LIKE con tablas:
 
-    Captura6
+![Foto 6](./img/metauso/Captura6.PNG)
 
 Usando LIKE con bases de datos:
 
-    Captura 7
+![Foto 7](./img/metauso/Captura7.PNG)
 
 
 > ----------------------------------------
