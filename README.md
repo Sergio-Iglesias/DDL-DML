@@ -1318,7 +1318,7 @@ SHOW {DATABASES | SCHEMAS}
     [LIKE 'pattern' | WHERE expr]
 ```
 
-El comando más básico para esto es el comando SHOW DATABASES. El cual nos permite ver las bases de datos que tenemos creadas.
+El comando más básico para usar la consola de comandos para visualizar nuestras bases de datos de forma gráfica es el comando SHOW DATABASES, el cual nos permite ver las bases de datos que tenemos creadas.
 
 ![Foto 0](./img/metauso/Captura0.PNG)
 
@@ -1329,7 +1329,8 @@ SHOW [FULL] TABLES [FROM db_name]
     [LIKE 'pattern' | WHERE expr]
 ```
 
-Una vez que accedamos a una base de datos, podemos usar SHOW para que nos enseñe las tablas de la base de datos, usando SHOW TABLES FROM.
+Una vez que accedamos a una base de datos, podemos usar SHOW para que nos enseñe las tablas de la base de datos, usando SHOW TABLES.
+También podemos usar  SHOW TABLES FROM para ver las tablas de una base de datos sin tener que acceder a ella primero.
 
 ![Foto 1](./img/metauso/Captura1.PNG)
 
@@ -1350,7 +1351,7 @@ Y el mismo comando SHOW nos permite ver las columnas de una tabla, con la inform
 SHOW CREATE TABLE tbl_name
 ```
 
-Usando SHOW CREATE TABLE también nos permite ver como se ha creado la tabla. (También existe SHOW CREATE DATABASE)
+Usando SHOW CREATE TABLE también nos permite ver como se ha creado la tabla. (También existe SHOW CREATE DATABASE).
 
 ![Foto 3](./img/metauso/Captura3.PNG)
 
